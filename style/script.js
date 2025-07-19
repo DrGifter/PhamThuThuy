@@ -35,6 +35,10 @@ const texts = [
   "HAPPY BIRTHDAY", 
   "Vũ Xuân Toàn", //Your Name
   "Tuổi Mới Zui Zẻ",
+  "Hạnh Phúc ⭐",
+  "May Mắn 🍀",
+  "Bình An 🌺",
+  "Giữ Gìn Sức Khỏe",
   "Mãi Yêu ❤️"
 ];
 
