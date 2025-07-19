@@ -1,17 +1,17 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
-const audio = document.getElementById("sound");
+const sound = document.getElementById('sound');
 
-function playMusicOnCanvasTouch() {
-  audio.play().catch((err) => {
-    console.log("Không thể phát nhạc:", err);
-  });
-  canvas.removeEventListener("click", playMusicOnCanvasTouch);
-  canvas.removeEventListener("touchstart", playMusicOnCanvasTouch);
+function playSound() {
+  if (sound.paused) {
+    sound.play().catch((e) => {
+      console.log('Phát nhạc bị chặn:', e);
+    });
+  }
 }
-
-canvas.addEventListener("click", playMusicOnCanvasTouch);
-canvas.addEventListener("touchstart", playMusicOnCanvasTouch);
+window.addEventListener('load', playSound);
+document.addEventListener('click', playSound);
+document.addEventListener('touchstart', playSound);
 
 let W, H;
 function resize() {
